@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "purpose": "Project identity and purpose"
+  },
+  "name": "nuke-arsenal",
+  "type": "desktop",
+  "tagline": "Personal command knowledge base",
+  "problem": "Terminal commands get lost in shell history - no context, no notes, no way to search by intent. Constantly forgetting commands across macOS, Docker, Node, Angular, project-specific tools.",
+  "solution": "Native desktop app (GUI-only, no CLI) with commands grouped by tool. NavRail navigation, search by description, sync via git/iCloud.",
+  "benefits": [
+    "Find commands by what they do, not exact syntax",
+    "Organize by tool: Docker, macOS, Node, Angular, etc.",
+    "Add notes explaining why/when to use a command",
+    "Sync across machines via git repo or iCloud",
+    "Instant access - just run 'arsenal' and window opens"
+  ],
+  "philosophy": [
+    "GUI-only - no CLI complexity",
+    "Single JSON file - flat and simple",
+    "Groups as pages - NavRail navigation like nuke-commander",
+    "Search by intent, not memory",
+    "Your terminal knowledge, persisted and synced"
+  ],
+  "stack": {
+    "runtime": "go",
+    "language": "go",
+    "frontend": "svelte5",
+    "desktop": "wails3",
+    "build": "make"
+  },
+  "folders": {
+    "cmd/arsenal/": "Wails app entry point - just opens window",
+    "internal/core/": "Business logic (CRUD, search)",
+    "internal/data/": "JSON file I/O and config",
+    "internal/models/": "Go type definitions",
+    "internal/services/": "Wails bindings for frontend",
+    "frontend/": "Svelte 5 GUI"
+  },
+  "dataModel": {
+    "configPath": "~/.config/arsenal/config.json",
+    "dataFile": "commands.json (user chooses location: git repo, iCloud, or local)",
+    "structure": {
+      "groups": {
+        "<groupKey>": {
+          "name": "Display name",
+          "icon": "phosphor icon id",
+          "description": "What this group is for",
+          "commands": [
+            {
+              "id": "unique int",
+              "cmd": "the command",
+              "description": "what it does (searchable)",
+              "output": "expected output (optional)",
+              "tags": ["optional", "tags"],
+              "note": "additional context (optional)",
+              "created": "timestamp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ui": {
+    "layout": "NavRail (left) + Content (right)",
+    "navItems": ["Dashboard", "...dynamic groups...", "Settings", "+ Add Group"],
+    "groupPage": "Header (name, search, +add) + CommandList",
+    "dashboard": "Global search, recent commands, stats"
+  }
+}

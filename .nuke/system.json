@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "purpose": "Technical architecture, stack, and file structure"
+  },
+  "structure": {
+    "root": ".",
+    "folders": [
+      "/.claude",
+      "/.idea",
+      "/.idea/codeStyles",
+      "/.nuke",
+      "/"
+    ],
+    "files": {
+      "/": [
+        "DESIGN.md"
+      ],
+      "/.claude": [
+        "CLAUDE.md"
+      ],
+      "/.idea": [
+        ".gitignore",
+        "modules.xml",
+        "nuke-arsenal.iml",
+        "vcs.xml"
+      ],
+      "/.idea/codeStyles": [
+        "codeStyleConfig.xml"
+      ],
+      "/.nuke": [
+        "guidelines.json",
+        "project.json",
+        "system.json",
+        "tasks.json"
+      ]
+    }
+  },
+  "last_updated": "2025-12-01T20:59:35+01:00"
+}

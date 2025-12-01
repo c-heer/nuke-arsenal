@@ -1,0 +1,17 @@
+# Binaries
+arsenal
+*.exe
+
+# Dependencies
+frontend/node_modules/
+
+# Build artifacts
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store

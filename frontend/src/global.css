@@ -1,0 +1,144 @@
+:root {
+    /* Colors */
+    --background-1: #0a0a0a;
+    --background-2: #111111;
+    --background-3: #1a1a1a;
+    --background-4: #0d0d0d;
+    --border-color-1: #222222;
+    --border-color-2: #333333;
+    --on-background: #ffffff;
+    --on-background-light: #888888;
+    --color-1: #00ff88;
+    --color-2: #00cc6a;
+    --color-error: #ff4444;
+
+    /* Typography */
+    --family-1: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --family-2: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    --font-size-1: 12px;
+    --font-size-2: 14px;
+    --font-size-3: 16px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+
+    /* Radius */
+    --radius-1: 4px;
+    --radius-2: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--family-1);
+    font-size: var(--font-size-2);
+    background: var(--background-1);
+    color: var(--on-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Draggable title bar area for macOS */
+.drag-region {
+    -webkit-app-region: drag;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color-2);
+    border-radius: var(--radius-1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--on-background-light);
+}
+
+/* Inputs */
+input, textarea {
+    font-family: var(--family-2);
+    font-size: var(--font-size-2);
+    background: var(--background-2);
+    border: 1px solid var(--border-color-1);
+    color: var(--on-background);
+    padding: var(--space-2);
+    border-radius: var(--radius-1);
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-1);
+}
+
+/* Buttons */
+button {
+    font-family: var(--family-1);
+    font-size: var(--font-size-2);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--on-background);
+}
+
+.btn {
+    padding: var(--space-2) var(--space-3);
+    background: var(--background-3);
+    border: 1px solid var(--border-color-1);
+    border-radius: var(--radius-1);
+}
+
+.btn:hover {
+    background: var(--background-2);
+    border-color: var(--color-1);
+}
+
+.btn-primary {
+    background: var(--color-1);
+    color: var(--background-1);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--color-2);
+}
+
+/* Code blocks */
+code, .code {
+    font-family: var(--family-2);
+    background: var(--background-2);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-1);
+    font-size: var(--font-size-1);
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    font-size: var(--font-size-1);
+    padding: 2px var(--space-2);
+    background: var(--background-3);
+    border-radius: var(--radius-1);
+    color: var(--on-background-light);
+}
