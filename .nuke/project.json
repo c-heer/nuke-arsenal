@@ -38,7 +38,8 @@
   },
   "dataModel": {
     "configPath": "~/.config/arsenal/config.json",
-    "dataFile": "commands.json (user chooses location: git repo, iCloud, or local)",
+    "defaultDataPath": "~/.nuke-arsenal/commands.json",
+    "dataFile": "commands.json (auto-init to ~/.nuke-arsenal, changeable to iCloud or git repo)",
     "structure": {
       "groups": {
         "<groupKey>": {
