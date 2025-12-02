@@ -7,7 +7,7 @@
 
     async function loadConfig() {
         try {
-            const { GetConfig } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { GetConfig } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             const config = await GetConfig();
             dataPath = config?.data_path || '';
         } catch (e) {
@@ -17,7 +17,7 @@
 
     async function saveConfig() {
         try {
-            const { SetDataPath } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { SetDataPath } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             await SetDataPath(dataPath);
             saved = true;
             setTimeout(() => saved = false, 2000);

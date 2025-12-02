@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/c-heer/nuke-arsenal/internal/models"
+	"github.com/nuke-studios/nuke-arsenal/internal/models"
 )
 
 // ReadCommands reads the commands file from configured path

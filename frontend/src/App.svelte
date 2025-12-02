@@ -4,7 +4,7 @@
     import Dashboard from "./components/Dashboard.svelte";
     import GroupPage from "./components/GroupPage.svelte";
     import Settings from "./components/Settings.svelte";
-    import { InitializeDefault } from "../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js";
+    import { InitializeDefault } from "../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js";
 
     let currentPage = $state('dashboard');
     let currentGroup = $state(null);

@@ -1,4 +1,4 @@
-module github.com/c-heer/nuke-arsenal
+module github.com/nuke-studios/nuke-arsenal
 
 go 1.25.4
 

@@ -5,11 +5,11 @@ version: '3'
 
 # This information is used to generate the build assets.
 info:
-  companyName: "c-heer"
+  companyName: "nuke-studios"
   productName: "Nuke Arsenal"
   productIdentifier: "dev.heer.nuke-arsenal"
   description: "Personal command knowledge base"
-  copyright: "(c) 2025, c-heer"
+  copyright: "(c) 2025, nuke-studios"
   comments: "Nuke Arsenal - Your terminal commands, organized and searchable"
   version: "1.0.0"
 

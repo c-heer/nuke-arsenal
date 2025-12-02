@@ -12,7 +12,7 @@
 
     async function loadGroups() {
         try {
-            const { GetGroups } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { GetGroups } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             groups = await GetGroups() || {};
         } catch (e) {
             console.error('Failed to load groups:', e);
@@ -25,7 +25,7 @@
             return;
         }
         try {
-            const { Search } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { Search } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             searchResults = await Search(searchQuery) || [];
         } catch (e) {
             console.error('Search failed:', e);
@@ -41,7 +41,7 @@
     <header class="page-header drag-region">
         <h1>Dashboard</h1>
         <div class="stats">
-            {Object.keys(groups).length} groups · {totalCommands} commands
+            {Object.keys(groups).length} groups ï¿½ {totalCommands} commands
         </div>
     </header>
 

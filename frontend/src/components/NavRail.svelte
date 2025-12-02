@@ -13,7 +13,7 @@
 
     async function loadGroups() {
         try {
-            const { GetGroups } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { GetGroups } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             groups = await GetGroups() || {};
         } catch (e) {
             console.error('Failed to load groups:', e);

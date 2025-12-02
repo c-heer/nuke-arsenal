@@ -4,8 +4,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/c-heer/nuke-arsenal/internal/data"
-	"github.com/c-heer/nuke-arsenal/internal/models"
+	"github.com/nuke-studios/nuke-arsenal/internal/data"
+	"github.com/nuke-studios/nuke-arsenal/internal/models"
 )
 
 // ArsenalService provides Wails bindings for the frontend

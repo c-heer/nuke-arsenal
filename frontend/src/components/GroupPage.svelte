@@ -17,7 +17,7 @@
 
     async function loadGroup() {
         try {
-            const { GetGroups } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { GetGroups } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             const groups = await GetGroups();
             group = groups?.[groupKey] || null;
         } catch (e) {
@@ -49,10 +49,10 @@
         const tags = formTags.split(',').map(t => t.trim()).filter(Boolean);
         try {
             if (editingCommand) {
-                const { UpdateCommand } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+                const { UpdateCommand } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
                 await UpdateCommand(groupKey, editingCommand.id, formCmd, formDesc, formOutput, formNote, tags);
             } else {
-                const { AddCommand } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+                const { AddCommand } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
                 await AddCommand(groupKey, formCmd, formDesc, formOutput, formNote, tags);
             }
             showForm = false;
@@ -64,7 +64,7 @@
 
     async function deleteCommand(id) {
         try {
-            const { DeleteCommand } = await import('../../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js');
+            const { DeleteCommand } = await import('../../bindings/github.com/nuke-studios/nuke-arsenal/internal/services/arsenalservice.js');
             await DeleteCommand(groupKey, id);
             loadGroup();
         } catch (e) {
