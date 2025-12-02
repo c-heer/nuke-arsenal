@@ -1,12 +1,14 @@
 # Binaries
 arsenal
 *.exe
+bin/
 
 # Dependencies
 frontend/node_modules/
 
 # Build artifacts
 frontend/dist/
+.task/
 
 # IDE
 .idea/
